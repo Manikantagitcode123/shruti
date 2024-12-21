@@ -1,0 +1,100 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.app {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.app-header {
+  margin-bottom: 30px;
+}
+
+.heading {
+  font-family: 'Lobster', cursive;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.impress-button {
+  background-color: #ff6347;
+  color: white;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: 'Roboto', sans-serif;
+}
+
+.impress-button:hover {
+  background-color: #e74c3c;
+  transform: scale(1.05);
+}
+
+.image-container {
+  margin-top: 20px;
+  animation: fadeIn 1s ease-out;
+}
+
+.impress-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-height: 80vh; /* Default max-height for larger screens */
+}
+
+/* Media Query for mobile phones (width ≤ 600px) */
+@media (max-width: 600px) {
+  .impress-image {
+    max-height: 60vh; /* On smaller screens like mobile phones, limit the height */
+  }
+}
+
+/* Media Query for tablets and laptops (width > 600px and ≤ 1024px) */
+@media (max-width: 1024px) {
+  .impress-image {
+    max-height: 70vh; /* On tablets and smaller laptops, adjust the height to 70% of the viewport */
+  }
+}
+
+/* Media Query for large screens (width > 1024px) */
+@media (min-width: 1025px) {
+  .impress-image {
+    max-height: 80vh; /* On larger screens, allow the image to occupy more height (up to 80%) */
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
